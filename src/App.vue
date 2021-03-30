@@ -238,6 +238,19 @@ export default {
   }
   },
          methods: {
+          addTask() {
+            this.update_mode = false;
+            this.form = {};
+            this.show = true;
+          },
+
+          saveTask() {
+            this.form.id = parseFloat(Math.random());
+            this.events.push(this.form);
+            this.form = {};
+            this.show = false;
+          },
+
           getStartDate() {
             let date = moment(this.currentDate);
             date.startOf('month');
@@ -358,13 +371,6 @@ export default {
             }
           },
 
-          nextMonth() {
-            this.currentDate = moment(this.currentDate).add(1, 'month');
-          },
-          prevMonth() {
-            this.currentDate = moment(this.currentDate).subtract(1, 'month');
-          },
-
           youbi(dayIndex) {
             let week = ['日', '月', '火', '水', '木', '金', '土'];
             const slice = week.splice(0, this.weekSlice);
@@ -387,7 +393,6 @@ export default {
             return this.events.slice(function () {
             });
           },
-
         },
 }
 </script>

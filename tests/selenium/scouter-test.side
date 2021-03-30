@@ -1,271 +1,214 @@
 {
-  "id": "0b59a7ad-a46b-4da2-a440-22e9ef52ab6f",
+  "id": "4d88682c-7414-4763-a086-85cb20617e5c",
   "version": "2.0",
-  "name": "20",
+  "name": "21_add",
   "url": "http://localhost",
   "tests": [{
-    "id": "515baf90-3b9d-4026-8979-f2251eced027",
-    "name": "20",
+    "id": "56959e55-37ed-456e-b7a0-26f59b60c4d8",
+    "name": "21",
     "commands": [{
-      "id": "140e8b4e-1d07-4315-b859-e3daea4b12ed",
+      "id": "44824354-6e8a-4595-a734-4e405b3c6cc4",
       "comment": "",
       "command": "open",
       "target": "http://localhost",
       "targets": [],
       "value": ""
     }, {
-      "id": "e2981d4f-3fe2-42d7-b459-ac5388f53a39",
+      "id": "54edcb3b-07f9-4ea1-8c63-e18eb8bd2732",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1440x877",
+      "target": "1920x1057",
       "targets": [],
       "value": ""
     }, {
-      "id": "9e730597-47f3-4ff2-9ed8-676fdea56d6d",
+      "id": "5ddd04d0-3f29-4690-a90f-863e704e9738",
+      "comment": "今月を取得",
+      "command": "executeScript",
+      "target": "date = new Date; return date.getFullYear()+'-'+(\"0\"+(date.getMonth() + 1)).slice(-2)+'-01'",
+      "targets": [],
+      "value": "this_month"
+    }, {
+      "id": "1b11e585-476e-47f7-aab7-8a5e93613a80",
       "comment": "",
       "command": "click",
-      "target": "css=.bg-purple-white:nth-child(1)",
+      "target": "css=.text-xs > .font-bold",
       "targets": [
-        ["css=.bg-purple-white:nth-child(1)", "css:finder"],
-        ["xpath=//input[@type='text']", "xpath:attributes"],
-        ["xpath=//div[@id='app']/div/div/form/input", "xpath:idRelative"],
+        ["css=.text-xs > .font-bold", "css:finder"],
+        ["xpath=//div[@id='app']/div/button/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'予定を追加する')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45a79e10-ec07-484e-a119-91b7b7ef93ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.my-4:nth-child(2) > .border",
+      "targets": [
+        ["css=.my-4:nth-child(2) > .border", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "247def80-e8c2-4f23-9073-655e7e57f2b8",
+      "id": "8b359ea3-4bf8-49aa-97ec-a15d2dbb604e",
       "comment": "",
       "command": "type",
-      "target": "css=.bg-purple-white:nth-child(1)",
+      "target": "css=.my-4:nth-child(2) > .border",
       "targets": [
-        ["css=.bg-purple-white:nth-child(1)", "css:finder"],
-        ["xpath=//input[@type='text']", "xpath:attributes"],
-        ["xpath=//div[@id='app']/div/div/form/input", "xpath:idRelative"],
+        ["css=.my-4:nth-child(2) > .border", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "2021"
+      "value": "test"
     }, {
-      "id": "aa3d68f4-4723-43ff-8c9d-6e2f380824ba",
+      "id": "e2b9113d-3f3f-44a8-9509-d3bb212bc490",
       "comment": "",
       "command": "click",
-      "target": "css=.bg-purple-white:nth-child(3)",
+      "target": "css=.my-4:nth-child(3) > .border",
       "targets": [
-        ["css=.bg-purple-white:nth-child(3)", "css:finder"],
-        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='app']/div/div/form/input[2]", "xpath:idRelative"],
-        ["xpath=//input[2]", "xpath:position"]
+        ["css=.my-4:nth-child(3) > .border", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "60f1ceda-508c-4c4a-9b30-342691c642bb",
+      "id": "216cc4c2-ec47-4603-a951-b90d698af2a5",
       "comment": "",
       "command": "type",
-      "target": "css=.bg-purple-white:nth-child(3)",
+      "target": "css=.my-4:nth-child(3) > .border",
       "targets": [
-        ["css=.bg-purple-white:nth-child(3)", "css:finder"],
-        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='app']/div/div/form/input[2]", "xpath:idRelative"],
-        ["xpath=//input[2]", "xpath:position"]
+        ["css=.my-4:nth-child(3) > .border", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
       ],
-      "value": "3"
+      "value": "${this_month}"
     }, {
-      "id": "f714276e-53b5-4818-9d30-c3457ca84003",
+      "id": "085fde03-85eb-4f2f-a8c4-b1c263e88463",
       "comment": "",
       "command": "click",
-      "target": "css=.focus\\3Aoutline-none",
+      "target": "css=.my-4:nth-child(4) > .border",
       "targets": [
-        ["css=.focus\\3Aoutline-none", "css:finder"],
-        ["xpath=//button[@type='submit']", "xpath:attributes"],
-        ["xpath=//div[@id='app']/div/div/form/button", "xpath:idRelative"],
-        ["xpath=//button", "xpath:position"],
-        ["xpath=//button[contains(.,'移動')]", "xpath:innerText"]
+        ["css=.my-4:nth-child(4) > .border", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "417e5927-bc72-48f0-ad97-67f20171ab94",
+      "id": "ff368090-227a-4183-a841-a92490c72536",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-youbi:nth-child(1)",
+      "command": "type",
+      "target": "css=.my-4:nth-child(4) > .border",
       "targets": [
-        ["css=.calendar-youbi:nth-child(1)", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div/div", "xpath:idRelative"],
-        ["xpath=//div/div[3]/div/div", "xpath:position"]
+        ["css=.my-4:nth-child(4) > .border", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
       ],
-      "value": "日"
+      "value": "${this_month}"
     }, {
-      "id": "2aa93032-1ee6-4eec-aad0-492b243015cf",
+      "id": "b3ff3be7-c242-4ec6-9f70-68cd6e263398",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-youbi:nth-child(2)",
+      "command": "click",
+      "target": "css=.contentmodal",
       "targets": [
-        ["css=.calendar-youbi:nth-child(2)", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div/div[2]", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+        ["css=.contentmodal", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]", "xpath:position"]
       ],
-      "value": "月"
+      "value": ""
     }, {
-      "id": "6692c161-eeee-492b-8a23-cfc3e21c11d9",
+      "id": "ab34ebd5-a753-4ed9-8b13-b22458202507",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-youbi:nth-child(3)",
+      "command": "click",
+      "target": "css=.my-4:nth-child(5) > .border",
       "targets": [
-        ["css=.calendar-youbi:nth-child(2)", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div/div[2]", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+        ["css=.my-4:nth-child(5) > .border", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[4]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
       ],
-      "value": "火"
+      "value": ""
     }, {
-      "id": "4aeb703e-4239-4bfb-9e23-f5b4aa4fcd85",
+      "id": "1423bbbc-c47e-47fa-8270-8b6528d1de09",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-youbi:nth-child(5)",
-      "targets": [
-        ["css=.calendar-youbi:nth-child(5)", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div/div[5]", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div[5]", "xpath:position"]
-      ],
-      "value": "木"
+      "command": "select",
+      "target": "css=.my-4:nth-child(5) > .border",
+      "targets": [],
+      "value": "label=01:00"
     }, {
-      "id": "d8517346-a4bc-4db1-ad90-903371cdb41f",
+      "id": "d3d977ff-69bb-49a7-a275-dcd9795020b0",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-youbi:nth-child(6)",
+      "command": "click",
+      "target": "css=.my-4:nth-child(6) > .border",
       "targets": [
-        ["css=.calendar-youbi:nth-child(2)", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div/div[2]", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+        ["css=.my-4:nth-child(6) > .border", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[5]/select", "xpath:idRelative"],
+        ["xpath=//div[5]/select", "xpath:position"]
       ],
-      "value": "金"
+      "value": ""
     }, {
-      "id": "d606d2e1-a75d-453a-b110-00f87423b184",
+      "id": "7b1f1580-01a7-4505-b70f-cd3e3567771e",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-youbi:nth-child(7)",
-      "targets": [
-        ["css=.calendar-youbi:nth-child(2)", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div/div[2]", "xpath:idRelative"],
-        ["xpath=//div[3]/div/div[2]", "xpath:position"]
-      ],
-      "value": "土"
+      "command": "select",
+      "target": "css=.my-4:nth-child(6) > .border",
+      "targets": [],
+      "value": "label=06:00"
     }, {
-      "id": "925a9f88-5f5a-4c4b-b994-27b20cd9a319",
+      "id": "d7734572-c0b6-461c-a08e-bb1e38799f07",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-weekly:nth-child(2) > .calendar-daily:nth-child(2) > .calendar-day",
+      "command": "click",
+      "target": "css=.my-4:nth-child(7) > .border",
       "targets": [
-        ["css=.calendar-weekly:nth-child(2) > .calendar-daily:nth-child(2) > .calendar-day", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div[2]/div[2]/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div[2]/div", "xpath:position"]
+        ["css=.my-4:nth-child(7) > .border", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
       ],
-      "value": "1"
+      "value": ""
     }, {
-      "id": "6c9a14bf-8166-4eb4-880c-6734deebcf51",
+      "id": "80dcffbb-2b0e-4811-89e2-5f014ddd28d1",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-weekly:nth-child(2) > .calendar-daily:nth-child(7) > .calendar-day",
+      "command": "type",
+      "target": "css=.my-4:nth-child(7) > .border",
       "targets": [
-        ["css=.calendar-weekly:nth-child(2) > .calendar-daily:nth-child(7) > .calendar-day", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div[2]/div[7]/div", "xpath:idRelative"],
-        ["xpath=//div[2]/div[7]/div", "xpath:position"]
+        ["css=.my-4:nth-child(7) > .border", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
       ],
-      "value": "6"
+      "value": "red"
     }, {
-      "id": "0928ce5d-be39-4e31-bcaf-05510f309329",
+      "id": "2fc5410c-2d60-4857-aef4-93834fab68f2",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-weekly:nth-child(3) > .calendar-daily:nth-child(1) > .calendar-day",
+      "command": "click",
+      "target": "css=.bg-blue-500:nth-child(1)",
       "targets": [
-        ["css=.calendar-weekly:nth-child(3) > .calendar-daily:nth-child(1) > .calendar-day", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div[3]/div/div", "xpath:idRelative"],
-        ["xpath=//div[3]/div[3]/div/div", "xpath:position"]
+        ["css=.bg-blue-500:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[8]/button", "xpath:idRelative"],
+        ["xpath=//div[8]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'タスクを追加')]", "xpath:innerText"]
       ],
-      "value": "7"
+      "value": ""
     }, {
-      "id": "9b316437-fe32-42d8-997f-006725c3df28",
+      "id": "3430c0c2-6f3a-4750-a6a6-e24120cb3439",
       "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-weekly:nth-child(3) > .calendar-daily:nth-child(7) > .calendar-day",
+      "command": "assertElementPresent",
+      "target": "css=p:nth-child(1)",
       "targets": [
-        ["css=.calendar-weekly:nth-child(3) > .calendar-daily:nth-child(7) > .calendar-day", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div[3]/div[7]/div", "xpath:idRelative"],
-        ["xpath=//div[3]/div[7]/div", "xpath:position"]
+        ["css=p:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[3]/div[2]/div[2]/div[2]/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'重要：')]", "xpath:innerText"]
       ],
-      "value": "13"
-    }, {
-      "id": "b14809fa-3a96-4820-ba43-0c8355797e19",
-      "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-weekly:nth-child(4) > .calendar-daily:nth-child(1) > .calendar-day",
-      "targets": [
-        ["css=.calendar-weekly:nth-child(4) > .calendar-daily:nth-child(1) > .calendar-day", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div[4]/div/div", "xpath:idRelative"],
-        ["xpath=//div[4]/div/div", "xpath:position"]
-      ],
-      "value": "14"
-    }, {
-      "id": "07e63535-164b-44a7-998b-3e58a3be3338",
-      "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-weekly:nth-child(4) > .calendar-daily:nth-child(7) > .calendar-day",
-      "targets": [
-        ["css=.calendar-weekly:nth-child(4) > .calendar-daily:nth-child(7) > .calendar-day", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div[4]/div[7]/div", "xpath:idRelative"],
-        ["xpath=//div[4]/div[7]/div", "xpath:position"]
-      ],
-      "value": "20"
-    }, {
-      "id": "49d88c98-5668-45ef-b593-1992aff7ce1e",
-      "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-weekly:nth-child(5) > .calendar-daily:nth-child(1) > .calendar-day",
-      "targets": [
-        ["css=.calendar-weekly:nth-child(5) > .calendar-daily:nth-child(1) > .calendar-day", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div[5]/div/div", "xpath:idRelative"],
-        ["xpath=//div[5]/div/div", "xpath:position"]
-      ],
-      "value": "21"
-    }, {
-      "id": "c41602b3-e39d-4fce-8a2b-dd38160b2eae",
-      "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-weekly:nth-child(5) > .calendar-daily:nth-child(7) > .calendar-day",
-      "targets": [
-        ["css=.calendar-weekly:nth-child(5) > .calendar-daily:nth-child(7) > .calendar-day", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div[5]/div[7]/div", "xpath:idRelative"],
-        ["xpath=//div[5]/div[7]/div", "xpath:position"]
-      ],
-      "value": "27"
-    }, {
-      "id": "2df166a5-cc04-44d5-ad93-07fb05ca5a6f",
-      "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-weekly:nth-child(6) > .calendar-daily:nth-child(1) > .calendar-day",
-      "targets": [
-        ["css=.calendar-weekly:nth-child(6) > .calendar-daily:nth-child(1) > .calendar-day", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div[6]/div/div", "xpath:idRelative"],
-        ["xpath=//div[6]/div/div", "xpath:position"]
-      ],
-      "value": "28"
-    }, {
-      "id": "fc2c3439-938f-49a8-9698-0320e686d04d",
-      "comment": "",
-      "command": "assertText",
-      "target": "css=.calendar-weekly:nth-child(6) > .calendar-daily:nth-child(4) > .calendar-day",
-      "targets": [
-        ["css=.calendar-weekly:nth-child(6) > .calendar-daily:nth-child(4) > .calendar-day", "css:finder"],
-        ["xpath=//div[@id='app']/div/div/div[3]/div[6]/div[4]/div", "xpath:idRelative"],
-        ["xpath=//div[6]/div[4]/div", "xpath:position"]
-      ],
-      "value": "31"
+      "value": ""
     }]
   }],
   "suites": [{
-    "id": "cca8f143-eb6c-4360-8b46-67da9375fec2",
+    "id": "0ae04bad-fd52-45bb-9cfb-16ab3a4f998c",
     "name": "Default Suite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["515baf90-3b9d-4026-8979-f2251eced027"]
+    "tests": ["56959e55-37ed-456e-b7a0-26f59b60c4d8"]
   }],
   "urls": ["localhost"],
   "plugins": []
