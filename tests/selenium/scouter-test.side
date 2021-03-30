@@ -1,0 +1,272 @@
+{
+  "id": "0b59a7ad-a46b-4da2-a440-22e9ef52ab6f",
+  "version": "2.0",
+  "name": "20",
+  "url": "http://localhost",
+  "tests": [{
+    "id": "515baf90-3b9d-4026-8979-f2251eced027",
+    "name": "20",
+    "commands": [{
+      "id": "140e8b4e-1d07-4315-b859-e3daea4b12ed",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2981d4f-3fe2-42d7-b459-ac5388f53a39",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x877",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9e730597-47f3-4ff2-9ed8-676fdea56d6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-purple-white:nth-child(1)",
+      "targets": [
+        ["css=.bg-purple-white:nth-child(1)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "247def80-e8c2-4f23-9073-655e7e57f2b8",
+      "comment": "",
+      "command": "type",
+      "target": "css=.bg-purple-white:nth-child(1)",
+      "targets": [
+        ["css=.bg-purple-white:nth-child(1)", "css:finder"],
+        ["xpath=//input[@type='text']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2021"
+    }, {
+      "id": "aa3d68f4-4723-43ff-8c9d-6e2f380824ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-purple-white:nth-child(3)",
+      "targets": [
+        ["css=.bg-purple-white:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60f1ceda-508c-4c4a-9b30-342691c642bb",
+      "comment": "",
+      "command": "type",
+      "target": "css=.bg-purple-white:nth-child(3)",
+      "targets": [
+        ["css=.bg-purple-white:nth-child(3)", "css:finder"],
+        ["xpath=(//input[@type='text'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "f714276e-53b5-4818-9d30-c3457ca84003",
+      "comment": "",
+      "command": "click",
+      "target": "css=.focus\\3Aoutline-none",
+      "targets": [
+        ["css=.focus\\3Aoutline-none", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='app']/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'移動')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "417e5927-bc72-48f0-ad97-67f20171ab94",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-youbi:nth-child(1)",
+      "targets": [
+        ["css=.calendar-youbi:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": "日"
+    }, {
+      "id": "2aa93032-1ee6-4eec-aad0-492b243015cf",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-youbi:nth-child(2)",
+      "targets": [
+        ["css=.calendar-youbi:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": "月"
+    }, {
+      "id": "6692c161-eeee-492b-8a23-cfc3e21c11d9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-youbi:nth-child(3)",
+      "targets": [
+        ["css=.calendar-youbi:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": "火"
+    }, {
+      "id": "4aeb703e-4239-4bfb-9e23-f5b4aa4fcd85",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-youbi:nth-child(5)",
+      "targets": [
+        ["css=.calendar-youbi:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div/div[5]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[5]", "xpath:position"]
+      ],
+      "value": "木"
+    }, {
+      "id": "d8517346-a4bc-4db1-ad90-903371cdb41f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-youbi:nth-child(6)",
+      "targets": [
+        ["css=.calendar-youbi:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": "金"
+    }, {
+      "id": "d606d2e1-a75d-453a-b110-00f87423b184",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-youbi:nth-child(7)",
+      "targets": [
+        ["css=.calendar-youbi:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": "土"
+    }, {
+      "id": "925a9f88-5f5a-4c4b-b994-27b20cd9a319",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-weekly:nth-child(2) > .calendar-daily:nth-child(2) > .calendar-day",
+      "targets": [
+        ["css=.calendar-weekly:nth-child(2) > .calendar-daily:nth-child(2) > .calendar-day", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div[2]/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "6c9a14bf-8166-4eb4-880c-6734deebcf51",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-weekly:nth-child(2) > .calendar-daily:nth-child(7) > .calendar-day",
+      "targets": [
+        ["css=.calendar-weekly:nth-child(2) > .calendar-daily:nth-child(7) > .calendar-day", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div[2]/div[7]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[7]/div", "xpath:position"]
+      ],
+      "value": "6"
+    }, {
+      "id": "0928ce5d-be39-4e31-bcaf-05510f309329",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-weekly:nth-child(3) > .calendar-daily:nth-child(1) > .calendar-day",
+      "targets": [
+        ["css=.calendar-weekly:nth-child(3) > .calendar-daily:nth-child(1) > .calendar-day", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[3]/div/div", "xpath:position"]
+      ],
+      "value": "7"
+    }, {
+      "id": "9b316437-fe32-42d8-997f-006725c3df28",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-weekly:nth-child(3) > .calendar-daily:nth-child(7) > .calendar-day",
+      "targets": [
+        ["css=.calendar-weekly:nth-child(3) > .calendar-daily:nth-child(7) > .calendar-day", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div[3]/div[7]/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[7]/div", "xpath:position"]
+      ],
+      "value": "13"
+    }, {
+      "id": "b14809fa-3a96-4820-ba43-0c8355797e19",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-weekly:nth-child(4) > .calendar-daily:nth-child(1) > .calendar-day",
+      "targets": [
+        ["css=.calendar-weekly:nth-child(4) > .calendar-daily:nth-child(1) > .calendar-day", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div[4]/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div", "xpath:position"]
+      ],
+      "value": "14"
+    }, {
+      "id": "07e63535-164b-44a7-998b-3e58a3be3338",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-weekly:nth-child(4) > .calendar-daily:nth-child(7) > .calendar-day",
+      "targets": [
+        ["css=.calendar-weekly:nth-child(4) > .calendar-daily:nth-child(7) > .calendar-day", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div[4]/div[7]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[7]/div", "xpath:position"]
+      ],
+      "value": "20"
+    }, {
+      "id": "49d88c98-5668-45ef-b593-1992aff7ce1e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-weekly:nth-child(5) > .calendar-daily:nth-child(1) > .calendar-day",
+      "targets": [
+        ["css=.calendar-weekly:nth-child(5) > .calendar-daily:nth-child(1) > .calendar-day", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div[5]/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div", "xpath:position"]
+      ],
+      "value": "21"
+    }, {
+      "id": "c41602b3-e39d-4fce-8a2b-dd38160b2eae",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-weekly:nth-child(5) > .calendar-daily:nth-child(7) > .calendar-day",
+      "targets": [
+        ["css=.calendar-weekly:nth-child(5) > .calendar-daily:nth-child(7) > .calendar-day", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div[5]/div[7]/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div[7]/div", "xpath:position"]
+      ],
+      "value": "27"
+    }, {
+      "id": "2df166a5-cc04-44d5-ad93-07fb05ca5a6f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-weekly:nth-child(6) > .calendar-daily:nth-child(1) > .calendar-day",
+      "targets": [
+        ["css=.calendar-weekly:nth-child(6) > .calendar-daily:nth-child(1) > .calendar-day", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div[6]/div/div", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div", "xpath:position"]
+      ],
+      "value": "28"
+    }, {
+      "id": "fc2c3439-938f-49a8-9698-0320e686d04d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.calendar-weekly:nth-child(6) > .calendar-daily:nth-child(4) > .calendar-day",
+      "targets": [
+        ["css=.calendar-weekly:nth-child(6) > .calendar-daily:nth-child(4) > .calendar-day", "css:finder"],
+        ["xpath=//div[@id='app']/div/div/div[3]/div[6]/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[6]/div[4]/div", "xpath:position"]
+      ],
+      "value": "31"
+    }]
+  }],
+  "suites": [{
+    "id": "cca8f143-eb6c-4360-8b46-67da9375fec2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["515baf90-3b9d-4026-8979-f2251eced027"]
+  }],
+  "urls": ["localhost"],
+  "plugins": []
+}
