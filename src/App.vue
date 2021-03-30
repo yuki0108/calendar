@@ -2,6 +2,8 @@
   <div class="bg-gray-100 pb-60">
       <div class="max-w-l mx-auto p-1 pt-10 pr-0 text-center">
         <h2 class="text-lg font-bold text-gray-800">{{ displayMonth }}</h2>
+        <div class="button-area">
+        </div>
         <button
           @click="addTask"
           class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 text-xs ml-4 mb-4 mr-0 ml-auto"
@@ -261,7 +263,6 @@ export default {
             this.form.color = task.color;
             this.form.startTime = task.startTime;
             this.form.endTime = task.endTime;
-            this.form.important = task.important;
           },
 
           updateTask(id) {
@@ -411,6 +412,83 @@ export default {
             return week[dayIndex];
           },
 
+          dragStart(dayEvent) {
+            event.dataTransfer.effectAllowed = 'move';
+            event.dataTransfer.dropEffect = 'move';
+            event.dataTransfer.setData('eventId', dayEvent);
+          },
+
+          dragleft(dayEvent) {
+            event.dataTransfer.effectAllowed = 'move';
+            event.dataTransfer.dropEffect = 'move';
+            event.dataTransfer.setData('dragIdLeft', dayEvent);
+          },
+          dragright(dayEvent) {
+            event.dataTransfer.effectAllowed = 'move';
+            event.dataTransfer.dropEffect = 'move';
+            event.dataTransfer.setData('dragIdRight', dayEvent);
+          },
+          dragEnd(date) {
+            let eventId = event.dataTransfer.getData('eventId');
+            let dragIdLeft = event.dataTransfer.getData('dragIdLeft');
+            let dragIdRight = event.dataTransfer.getData('dragIdRight');
+            // this.colRight = false;
+
+            if (eventId !== '') {
+              let dragEvent = this.events.find((event) => event.id == eventId);
+              let betweenDays = moment(dragEvent.end).diff(
+                moment(dragEvent.start),
+                'days'
+              );
+              dragEvent.start = date;
+              dragEvent.end = moment(dragEvent.start)
+                .add(betweenDays, 'days')
+                .format('YYYY-MM-DD');
+
+              let drag_index;
+              this.events.map((task, index) => {
+                if (task.id === parseFloat(eventId)) {
+                  drag_index = index;
+                }
+              });
+              this.events.splice(drag_index, 1);
+              this.events.push(dragEvent);
+
+            }
+
+            if (dragIdLeft !== '') {
+              let dragEvent = this.events.find(
+                (event) => event.id == dragIdLeft
+              );
+              dragEvent.start = date;
+
+              let drag_index;
+              this.events.map((task, index) => {
+                if (task.id === parseFloat(dragIdLeft)) {
+                  drag_index = index;
+                }
+              });
+              this.events.splice(drag_index, 1);
+              this.events.push(dragEvent);
+            }
+
+            if (dragIdRight !== '') {
+              let dragEvent = this.events.find(
+                (event) => event.id == dragIdRight
+              );
+              dragEvent.end = date;
+
+              let drag_index;
+              this.events.map((task, index) => {
+                if (task.id === parseFloat(dragIdRight)) {
+                  drag_index = index;
+                }
+              });
+              this.events.splice(drag_index, 1);
+              this.events.push(dragEvent);
+              this.colRight = true;
+            }
+          },
         },
         computed: {
           calendars() {
@@ -426,6 +504,7 @@ export default {
             return this.events.slice(function () {
             });
           },
+
         },
 }
 </script>
