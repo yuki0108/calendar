@@ -1,7 +1,7 @@
 {
   "id": "4d88682c-7414-4763-a086-85cb20617e5c",
   "version": "2.0",
-  "name": "21_add",
+  "name": "21_edit_and_delete",
   "url": "http://localhost",
   "tests": [{
     "id": "56959e55-37ed-456e-b7a0-26f59b60c4d8",
@@ -24,7 +24,7 @@
       "id": "5ddd04d0-3f29-4690-a90f-863e704e9738",
       "comment": "今月を取得",
       "command": "executeScript",
-      "target": "date = new Date; return date.getFullYear()+'-'+(\"0\"+(date.getMonth() + 1)).slice(-2)+'-01'",
+      "target": "date = new Date; return date.getFullYear()+'-'+(\"0\"+(date.getMonth() + 1)).slice(-2)+'-1'",
       "targets": [],
       "value": "this_month"
     }, {
@@ -192,6 +192,99 @@
       "id": "3430c0c2-6f3a-4750-a6a6-e24120cb3439",
       "comment": "",
       "command": "assertElementPresent",
+      "target": "css=p:nth-child(1)",
+      "targets": [
+        ["css=p:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[3]/div[2]/div[2]/div[2]/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'重要：')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fe14f22-1046-415f-808d-d18af6aefce8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.calendar-event > p:nth-child(2)",
+      "targets": [
+        ["css=.calendar-event > p:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[3]/div[2]/div[2]/div[2]/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'開始01:00')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da129ea2-941a-495a-8a26-97fdba96a68d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.my-4:nth-child(2) > .border",
+      "targets": [
+        ["css=.my-4:nth-child(2) > .border", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1f054a2-b6e9-44d8-b088-1d54cfe8512d",
+      "comment": "",
+      "command": "type",
+      "target": "css=.my-4:nth-child(2) > .border",
+      "targets": [
+        ["css=.my-4:nth-child(2) > .border", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test1"
+    }, {
+      "id": "b16004c6-3164-4f20-a063-88e0451fbcd7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.font-bold > .font-bold",
+      "targets": [
+        ["css=.font-bold > .font-bold", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[8]/button/span", "xpath:idRelative"],
+        ["xpath=//div[8]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'予定を更新')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "96f328d0-2c69-443c-afa8-3db241fb45e7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p:nth-child(1)",
+      "targets": [
+        ["css=p:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[3]/div[2]/div[2]/div[2]/div/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'test1')]", "xpath:innerText"]
+      ],
+      "value": "test1"
+    }, {
+      "id": "91e3e338-5d2d-4263-9ebc-beabce26ae8a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.calendar-event > .flex",
+      "targets": [
+        ["css=.calendar-event > .flex", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[3]/div[2]/div[2]/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd36fae0-db30-4527-8342-475c5c553b41",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-red-500 > .text-xs",
+      "targets": [
+        ["css=.bg-red-500 > .text-xs", "css:finder"],
+        ["xpath=//div[@id='app']/div/div[2]/div/div[2]/div[8]/button[2]/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'予定を削除')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d572e54-08f7-4532-829a-63c345aa2e45",
+      "comment": "",
+      "command": "assertElementNotPresent",
       "target": "css=p:nth-child(1)",
       "targets": [
         ["css=p:nth-child(1)", "css:finder"],

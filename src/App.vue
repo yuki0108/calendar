@@ -251,6 +251,39 @@ export default {
             this.show = false;
           },
 
+          editTask(task) {
+            this.update_mode = true;
+            this.show = true;
+            this.form.id = task.id;
+            this.form.name = task.name;
+            this.form.start = task.start;
+            this.form.end = task.end;
+            this.form.color = task.color;
+            this.form.startTime = task.startTime;
+            this.form.endTime = task.endTime;
+            this.form.important = task.important;
+          },
+
+          updateTask(id) {
+            let edit_index;
+            this.events.map((task, index) => {
+              if (task.id === id) edit_index = index;
+            });
+            this.events.splice(edit_index, 1);
+            this.events.push(this.form);
+            this.form = {};
+            this.show = false;
+          },
+
+          deleteTask(id) {
+            let delete_index;
+            this.events.map((task, index) => {
+              if (task.id === id) delete_index = index;
+            });
+            this.events.splice(delete_index, 1);
+            this.form = {};
+            this.show = false;
+          },
           getStartDate() {
             let date = moment(this.currentDate);
             date.startOf('month');
